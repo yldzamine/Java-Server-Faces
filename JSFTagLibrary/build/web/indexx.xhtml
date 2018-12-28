@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>BAŞLAYALIM</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <table border="1" width="500">
+            <thead>
+                <tr>
+                    <th>Tablomuz</th>
+                    <th>Örnek 1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td valign="top">Adı-Soyadı :</td>
+                    <td valign="top">
+                        <h:inputText value="#{yönetimliBean2.adisoyadi}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Mesaj :</td>
+                    <td valign="top">
+                        <h:inputTextarea value="#{yönetimliBean2.mesaj}"
+                                         cols="30" rows="10"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Adres :</td>
+                    <td valign="top">
+                        <h:inputTextarea value="#{yönetimliBean2.adres}"/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td valign="top">
+                        <h:commandButton value="GÖNDER" action="sayfa2"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </h:form>
+        
+    </h:body>
+</html>
+
