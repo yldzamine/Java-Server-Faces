@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>uyeBean</managed-bean-name>
+        <managed-bean-class>com.amine.UyeBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+     <navigation-rule>
+        <description>UYE GIRISINI DENETLE</description>
+        <from-view-id>/uyegirisi.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-action>#{uyeBean.uyeGirisiniDenetle}</from-action>
+            <from-outcome>gecerli</from-outcome>
+            <to-view-id>/basarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{uyeBean.uyeGirisiniDenetle}</from-action>
+            <from-outcome>gecersiz</from-outcome>
+            <to-view-id>/basarisiz.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>BASARISIZ UYE GIRISI</description>
+        <from-view-id>/basarisiz.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-action>#{uyeBean.uyeGirisiniDenetle}</from-action>
+            <from-outcome>gecerli</from-outcome>
+            <to-view-id>/basarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{uyeBean.uyeGirisiniDenetle}</from-action>
+           <from-outcome>gecersiz</from-outcome>
+            <to-view-id>/basarisiz.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+     
+</faces-config>
