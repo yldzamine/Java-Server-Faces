@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>SELECT ONE RADİO</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            1.SelectedOneRadio içindekileri kendimiz elimizle doldurduk.
+            <h:selectOneRadio value="#{yb.programlamaDili}">
+                <f:selectItem itemValue="Java" itemLabel="JSF İLE WEB"/>
+                <f:selectItem itemValue="C#" itemLabel="C# İLE WEB"/>
+                <f:selectItem itemValue="PHP" itemLabel="PHP İLE WEB"/>
+                <f:selectItem itemValue="Phyton" itemLabel="Phyton İLE WEB"/>
+            </h:selectOneRadio>
+            <br/>
+            3. h:selectedOneRadio içini bir sınıf bir nesne ile doldurduk.
+            <h:selectOneRadio value="#{yb.egitmen}">
+                <f:selectItems value="#{yb.egitmenBilgileriniAl}" var="e" itemLabel="#{e.egitmenAdi}" itemValue="#{e.egitmenNo}"/>
+            </h:selectOneRadio>
+            <br/>
+            
+            <h:commandButton value="Temizle" type="reset"/>
+            <h:commandButton value="Gonder" action="sayfa2"/>
+        </h:form>
+    </h:body>
+</html>
+
