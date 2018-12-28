@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Girilen tamsayının alt ve üst aralıklarda denetimi</title>
+    </h:head>
+    <h:body>
+        <h2>f:validateLongRange</h2>
+        <h:form>
+            <h:panelGrid columns="3">
+                Tam sayı giriniz:
+                <h:inputText id="tamsayi" value="#{yönetimliBean.tamsayi}"
+                             size="40" required="true"
+                             label="Belirlenen aralıkta bir tamsayı giriniz">
+                    <f:validateLongRange minimum="571" maximum="1453" />
+                </h:inputText>
+                
+                <h:commandButton value="Gönder" action="sonuc" />
+            </h:panelGrid>
+            <h:message for="tamsayi" style="color: blue" />
+        </h:form>
+        
+    </h:body>
+</html>
+
