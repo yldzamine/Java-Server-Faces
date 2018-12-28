@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>Managed Bean - Yönetimli Kahve Çekirdeği 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+           <f:view> 
+            <h3> Managed Bean - Yönetimli Kahve Çekirdeği 3</h3>
+            <h:form>
+                <h:panelGrid id="panel1" columns="2" border="0">
+                    <f:facet name="header">
+                        <h:outputText value="ÜYE GİRİŞİ"/>
+                    </f:facet>
+                    
+                    <h:outputText value="ADI:"/>
+                    <h:inputText value="#{yönetimliBean3.adi}"/>
+                    
+                    <h:outputText value="SOYADI:"/>
+                    <h:inputText value="#{yönetimliBean3.soyadi}"/>
+                    
+                    <h:outputText value="DENEYİM"/>
+                    <h:selectOneRadio layout="pageDirection"
+                                      value="#{yönetimliBean3.deneyim}">
+                    
+                    <f:selectItem itemValue="JSP" itemLabel="Java Server Pages"/>
+                    <f:selectItem itemValue="JSF" itemLabel="Java Server Faces"/>
+                    <f:selectItem itemValue="Spring" itemLabel="Spring"/>
+                    <f:selectItem itemValue="Hipernate" itemLabel="Hipernate"/>
+                    <f:selectItem itemValue="PF" itemLabel="Prime Faces"/>
+                    </h:selectOneRadio>
+                        
+                    <h:commandButton value="Temizle" type="reset"/>
+                    <h:commandButton value="Gonder" action="#{yönetimliBean3.yazdirMetodu()}"/>
+                    
+                    <f:facet name="footer">
+                        <h:outputText value="Girilen Bilgilriniz"/>
+                    </f:facet>
+                   </h:panelGrid>
+                
+                    <hr/>
+                    <h:outputText value="ADI SOYADI" />
+                    <h:outputLabel id="isimSoyisim" value="#{yönetimliBean3.adi} #{yönetimliBean3.soyadi}"/>
+                    <br/>
+                    <h:outputText value="DENEYİM"/>
+                    <h:outputLabel id="tecrube" value="#{yönetimliBean3.deneyim}"/>
+                
+            </h:form>
+        </f:view>
+    </body>
+</html>
