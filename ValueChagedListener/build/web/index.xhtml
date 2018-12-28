@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Olay Dinleyicileri</title>
+    </h:head>
+    <h:body>
+        <h2>Olaylarlardaki değiştirilen değeri dinlemek
+        <hr/>
+        f:valueCChangeListener</h2>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Seçilen Personel Hakkında" />
+                <h:inputText id="personel" value="#{yb.hakkinda}" size="45" />
+                
+                <h:outputLabel
+                    value="Seçilen personelin adı-soyadı {ValueGhangeListener class}:" />
+                <h:selectOneMenu value="#{yb.hakkinda}" onchange="submit">
+                    <f:valueChangeListener type="comsite.PersonelValueListener" />
+                    <f:selectItems value="#{yb.personelInMap}" />                
+                </h:selectOneMenu>
+                
+                <ui:remove>
+                    <h:outputLabel
+                        value="Seçilen Pesonelin adı-soyadı (method binding):" />
+                    <h:selectOneMenu value="#{yb.hakkinda}" onchange="submit()"
+                                     valueChangeListener="#{yb.personelHakkindaChanged(e)}">
+                        <f:selectItems value="#{yb.personelInMap}"/>
+                    </h:selectOneMenu> 
+                </ui:remove>
+                
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
