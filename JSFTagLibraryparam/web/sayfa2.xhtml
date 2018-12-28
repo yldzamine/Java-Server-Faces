@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Param kullanımı</title>
+    </h:head>
+    <h:body>
+        <h1>Param Kullanımı</h1>
+        <h:outputStylesheet library="css" name="sytle.css"/>
+        <h:panelGrid columns="2">
+            <h1>Gelen Değerler</h1>
+            <h:graphicImage library="resimler" name="aaa_1.png" width="100" height="100"/>
+        </h:panelGrid>
+        
+        <h:panelGrid columns="2" styleClass="mavi">
+        
+        <h3>
+            <h:outputFormat value="ADI SOYADI : {0} {1}   BÖLÜMÜ:  {2}" >
+                <f:param value="#{yb.adi}"/>
+                <f:param value="#{yb.soyadi}"/>
+                <f:param value="#{yb.bolumu}"/>
+            </h:outputFormat>
+        </h:panelGrid> 
+        </h3>
+    </h:body>
+</html>
+
