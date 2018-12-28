@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <description>UYE GIRIS SAYFASI</description>
+        <from-view-id>/uyegirisi.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeGirisiniDenetle}</from-action>
+            <from-outcome>uyegirisibasarili</from-outcome>
+            <to-view-id>/uyegirisibasarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeGirisiniDenetle}</from-action>
+            <from-outcome>uyegirisibasarisiz</from-outcome>
+            <to-view-id>/uyegirisibasarisiz.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeKayidiniDenetle}</from-action>
+            <from-outcome>uyeeklemebasarili</from-outcome>
+            <to-view-id>/uyegirisibasarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeKayidiniDenetle}</from-action>
+            <from-outcome>uyeeklemebasarisiz</from-outcome>
+            <to-view-id>/uyegirisi.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>BASARISIZ UYE GIRISININ DENETIMI</description>
+        <from-view-id>/uyegirisibasarisiz.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeGirisiniDenetle}</from-action>
+            <from-outcome>uyegirisibasarili</from-outcome>
+            <to-view-id>/uyegirisibasarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeGirisiniDenetle}</from-action>
+            <from-outcome>uyegirisibasarisiz</from-outcome>
+            <to-view-id>/uyegirisibasarisiz.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>UYE DUZENLEME SAYFASI</description>
+        <from-view-id>/uyeduzenleme.xhtml</from-view-id>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeDuzenlemeyiDenetle}</from-action>
+            <from-outcome>uyeduzenlemebasarili</from-outcome>
+            <to-view-id>/uyeduzenlemebasarili.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{ub.uyeDuzenlemeyiDenetle}</from-action>
+            <from-outcome>uyeduzenlemebasarisiz</from-outcome>
+            <to-view-id>/sorunvar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
