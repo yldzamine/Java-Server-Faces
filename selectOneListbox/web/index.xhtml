@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF Tag h:selectOneListBox</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <h1>JSF Tag h:selectOneListBox</h1>
+        3.selectOneListBox içini bir sınıf ve nesne ile doldurduk.
+        <br/>
+        <h:selectOneListbox value="#{yb.tarih3}">
+            <f:selectItems value="#{yb.tarih3DegerleriniAl}" var="y"
+                           itemValue="#{y.yilDegeri}" itemLabel="#{y.yilEtiketi}"/>
+        </h:selectOneListbox>
+        
+        <br/>
+        <h:selectManyMenu value="#{yb.tarih3}">
+            <f:selectItems value="#{yb.tarih3DegerleriniAl}" var="k"
+                           itemValue="#{k.yilDegeri}" itemLabel="#{k.yilEtiketi}"/>
+        </h:selectManyMenu>
+        
+        <br/>
+        
+        <h:commandButton value="Temizle" type="reset"/>
+        <h:commandButton value="Gönder" action="sayfa2"/>
+        </h:form>
+    </h:body>
+</html>
+
