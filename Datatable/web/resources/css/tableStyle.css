@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2018, 9:20:12 AM
+    Author     : Amine YILDIZ
+*/
+
+.personel-tablo{
+    border-collapse: collapse;
+}
+.personel-tablo-baslik{
+    text-align: center;
+    background: none repeat scroll 0 0 yellowgreen;
+    border-bottom: 1px solid buttonface;
+    padding: 16px;
+}
+.persone-tablo-tek-satir{
+    text-align: center;
+    background: none repeat scroll 0 0 lightskyblue;
+    border-top: 1px solid buttonface;
+    }
+.personel-tablo-cift-satir{
+   text-align: center;
+   background: none repeat scroll 0 0 lightsteelblue;
+   border-top: 1px solid buttonface;
+ }
