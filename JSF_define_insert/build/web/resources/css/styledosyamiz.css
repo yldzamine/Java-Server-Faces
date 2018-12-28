@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 1, 2018, 8:13:56 PM
+    Author     : Amine YILDIZ.
+*/
+
+.tablo-ust-kisim{
+    text-align: center;
+    background: none repeat scroll 0 0 cadetblue;
+    border-bottom: 1px solid buttonface;
+}
+.tablo-orta-kisim{
+    text-align: center;
+    background: none repeat scroll 0 0 darkgreen;
+    border-top: 1px solid buttonface;
+}
+.tablo-alt-kisim{
+    text-align: center;
+    background: none repeat scroll 0 0 tomato;
+}
+
+.kirmizi{
+    color: red;
+}
+.mavi{
+    color: blue;
+}
+.yesil{
+    color: green;
+    font-family:  Verdana,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+}
+
+#sayfa{
+    width: 800px;
+    margin: 0 auto;
+}
+
+#baslik-kisim{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 2px solid blue;
+}
+
+#orta-kisim{
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    border: 2px solid antiquewhite;
+}
+
+#alt-kisim{
+    width: 100%;
+    height: 100px;
+    border: 2px solid bisque;
+}
