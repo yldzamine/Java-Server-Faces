@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>inputText-inputSecret-inputHidden-inputTextArea</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h3>INPUT BİLEŞENLERİ:
+            inputText-inputSecret-inputHidden-inputTextArea</h3>
+            <h:form id="form1">
+             İnputText
+             <input type="text" name="metinkutusu" value="Java Server Faces"/>
+             <br/>
+             İnputSecret
+             <h:inputSecret id="parolaBilgisi" redisplay="false" value="1453"/>
+             <br/>
+             İnputHidden
+             <h:inputHidden id="gizliMetinAlani" value="Aktarılacak Veri"/>
+             <br/>
+             İnputTextArea
+             <h:inputTextarea id="cokSatirlikMetinAlani" rows="10" cols="10"
+                              value="Güzel Gören Güzel Düşünür
+                              Güzel Düşünen Hayattan Lezzet Alır."/>
+            </h:form>             
+        </f:view>
+    </h:body>
+</html>
+
